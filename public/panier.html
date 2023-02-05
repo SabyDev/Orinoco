@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- lien icones -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!-- lien css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="asset/css/style.css">
+    <title>Orinoco</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo"><img src="asset/img/orinoco_logo.png"
+                alt="logo orinoco caddie shopping avec inscription du logo">
+        </div>
+        <div class="img_presentation_header">
+            <img id="img_presentation"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1q_vKFvhgCEzYQw2CEIfanjdaRoAB9C5efg&usqp=CAU"
+                alt="femme aux cheveux rouge dans une voiture améicaine prenant une photo avec un appareil photographique vintage">
+        </div>
+    </header >
+    <nav>
+        <ul>
+            <li><a href="../public/index.html">Accueil</a> </li>
+            <li> <a href="../public/page_confirmation.html">Commande</a> </li>
+            <li> <a href="#">Compte</a> </li>
+            <li> <a href="#">Contact</a> </li>
+            <li><a href="../public/panier.html"><i class="fas fa-shopping-cart"></i></a> </li>
+        </ul>
+    </nav>
+    <main id="container-panier">
+        <div id="panier-vide">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Article</th>
+                        <th>Option</th>
+                        <th>Prix Unitaire</th>
+                        <th>Quantité</th>
+                        <th>Prix</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-tablebody">
+                </tbody>
+            </table>
+            <p class="total">Sous total : <span id="sub_total" class="subtotal"></span>€</p>
+            <div id="vider-le-panier"></div>
+       
+        <h2 class="h1-responsive font-weight-bold text-center my-4">Formulaire</h2>
+        <p class="text-center w-responsive mx-auto mb-5">Merci de bien vouloir remplir ce formulaire afin de finaliser
+            votre commande.</p>
+        <form action="" method="POST" id="userformulaire">
+            <div class="row">
+                <div class="col-md-9 mb-md-0 mb-5">
+                    <form id="contact-form" name="contact-form" action="mail.js" method="POST">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="md-form mb-0">
+                                    <input type="text" id="firstname" placeholder="Votre nom" name="first_name"
+                                        class="form-control" required>
+                                    <label for="firstname" id="contact-firstname" class=""></label>
+                                    <small></small>
+                                </div>
+                                <div class="md-form mb-0">
+                                    <input type="text" id="lastname" placeholder="Votre prénom" name="last_name"
+                                        class="form-control" required>
+                                    <label for="lastname" class=""></label>
+                                    <small></small>
+                                </div>
+                                <div class="md-form mb-0">
+                                    <input type="email" id="email" placeholder="Votre addresse mail" name="email"
+                                        class="form-control" required>
+                                    <label for="email" class=""></label>
+                                    <small></small>
+                                </div>
+                            </div>
+                            <div class="md-form mb-0">
+                                <input type="text" id="address" placeholder="Votre addresse" name="address"
+                                    class="form-control" required>
+                                <label for="address" class=""></label>
+                                <small></small>
+                            </div>
+                            <div class="md-form mb-0">
+                                <input type="number" id="cp" placeholder="Code postal" name="cp" class="form-control"
+                                    required>
+                                <label for="cp" class=""></label>
+                                <small></small>
+                            </div>
+                            <div class="md-form mb-0">
+                                <input type="text" id="city" placeholder="Ville" name="city" class="form-control"
+                                    required>
+                                <label for="city" class=""></label>
+                                <small></small>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="text-center text-md-left">
+                    <button id="bouton">Passer la commande
+                        <!-- <a id="btn-send" class="btn btn-primary"
+                        onclick="document.getElementById('contact-form').submit();">Envoyer</a> -->
+                    </button>
+                </div>
+            </div>
+        </form>
+        </div>
+     </div>
+        </section>
+    </main>
+    <script src="asset/js/panier.js" defer></script>    
+</body>
+
+</html>
